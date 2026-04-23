@@ -1,0 +1,1 @@
+[train: 1, 50 / 7500] FPS: 19.0 (40.4)  ,  Loss/total: 27.50274  ,  Loss/giou: 1.17262  ,  Loss/l1: 0.30603  ,  Loss/location: 23.62736  ,  IoU: 0.06577

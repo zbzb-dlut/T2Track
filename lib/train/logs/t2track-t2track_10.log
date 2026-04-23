@@ -1,0 +1,13 @@
+[train: 1, 50 / 1875] FPS: 21.1 (258.1)  ,  Loss/total: 63.34637  ,  Loss/giou: 1.14261  ,  Loss/l1: 0.21911  ,  Loss/location: 59.96560  ,  IoU: 0.11101
+[train: 1, 100 / 1875] FPS: 17.5 (261.4)  ,  Loss/total: 44.49440  ,  Loss/giou: 1.07050  ,  Loss/l1: 0.20297  ,  Loss/location: 41.33852  ,  IoU: 0.14466
+[train: 1, 150 / 1875] FPS: 16.7 (13.5)  ,  Loss/total: 34.20054  ,  Loss/giou: 1.03867  ,  Loss/l1: 0.19701  ,  Loss/location: 31.13818  ,  IoU: 0.15850
+[train: 1, 200 / 1875] FPS: 16.5 (6.3)  ,  Loss/total: 28.40320  ,  Loss/giou: 1.01433  ,  Loss/l1: 0.19065  ,  Loss/location: 25.42132  ,  IoU: 0.16904
+[train: 1, 250 / 1875] FPS: 17.0 (263.5)  ,  Loss/total: 24.42838  ,  Loss/giou: 0.99660  ,  Loss/l1: 0.18654  ,  Loss/location: 21.50249  ,  IoU: 0.17750
+[train: 1, 300 / 1875] FPS: 16.8 (253.5)  ,  Loss/total: 21.50307  ,  Loss/giou: 0.97719  ,  Loss/l1: 0.18064  ,  Loss/location: 18.64549  ,  IoU: 0.18873
+[train: 1, 350 / 1875] FPS: 16.3 (257.6)  ,  Loss/total: 19.27516  ,  Loss/giou: 0.95643  ,  Loss/l1: 0.17329  ,  Loss/location: 16.49588  ,  IoU: 0.20275
+[train: 1, 400 / 1875] FPS: 16.2 (254.5)  ,  Loss/total: 17.53955  ,  Loss/giou: 0.93787  ,  Loss/l1: 0.16679  ,  Loss/location: 14.82985  ,  IoU: 0.21597
+[train: 1, 450 / 1875] FPS: 16.4 (257.7)  ,  Loss/total: 16.15996  ,  Loss/giou: 0.92430  ,  Loss/l1: 0.16217  ,  Loss/location: 13.50054  ,  IoU: 0.22593
+[train: 1, 500 / 1875] FPS: 16.0 (259.3)  ,  Loss/total: 14.98028  ,  Loss/giou: 0.90992  ,  Loss/l1: 0.15733  ,  Loss/location: 12.37379  ,  IoU: 0.23626
+[train: 1, 550 / 1875] FPS: 16.0 (257.5)  ,  Loss/total: 13.98662  ,  Loss/giou: 0.89676  ,  Loss/l1: 0.15326  ,  Loss/location: 11.42678  ,  IoU: 0.24552
+[train: 1, 600 / 1875] FPS: 16.0 (259.8)  ,  Loss/total: 13.13906  ,  Loss/giou: 0.88440  ,  Loss/l1: 0.14931  ,  Loss/location: 10.62371  ,  IoU: 0.25463
+[train: 1, 650 / 1875] FPS: 15.7 (260.6)  ,  Loss/total: 12.41045  ,  Loss/giou: 0.87317  ,  Loss/l1: 0.14588  ,  Loss/location: 9.93469  ,  IoU: 0.26254

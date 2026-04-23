@@ -1,0 +1,118 @@
+# if len(self.network.pred_score_lists)<10:
+#     self.network.pred_score_lists.append(conf_score)
+#     self.network.append_new_memory(pred_boxes)
+# elif len(self.network.pred_score_lists)==10:
+#     self.avg_pred_score = sum(self.network.pred_score_lists) / len(self.network.pred_score_lists)
+#     self.network.pred_score_lists.append(conf_score)
+# else:
+#     if conf_score.item()>=self.avg_pred_score.item():
+
+#     self.network.append_new_memory(pred_boxes)
+更新方法方法的结果：
+
+uav123          | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 66.52      | 82.31      | 58.36      | 87.77        | 82.78             |
+
+dtb             | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 68.31      | 84.99      | 58.54      | 87.52        | 83.82             |
+
+uavtrack112      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12       | 69.36      | 83.41      | 66.62      | 85.60        | 84.40             |
+
+uavtrack112_l      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12         | 63.80      | 76.20      | 60.32      | 80.75        | 77.31             |
+
+uav123_10fps      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12        | 66.08      | 81.87      | 58.16      | 84.37        | 82.30             |
+
+uav123_l        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 68.95      | 85.63      | 62.91      | 87.09        | 89.28             |
+
+uavdt           | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 61.82      | 77.19      | 48.79      | 84.09        | 71.77             |
+
+visdrone        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 64.07      | 80.81      | 53.39      | 83.61        | 79.58             |
+
+用tcsvt在投稿论文28542的方法，结果如下：
+uav123          | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 66.57      | 82.58      | 57.21      | 87.99        | 82.82             |
+
+dtb             | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 67.68      | 84.00      | 58.40      | 87.19        | 82.46             |
+
+uavtrack112      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12       | 68.47      | 82.25      | 65.20      | 85.05        | 83.79             |
+
+uavtrack112_l      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12         | 63.48      | 75.39      | 60.57      | 80.65        | 77.21             |
+
+uav123_10fps      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12        | 67.02      | 83.14      | 58.25      | 85.61        | 83.27             |
+
+uav123_l        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 65.14      | 81.56      | 56.85      | 82.19        | 85.20             |
+
+uavdt           | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 64.70      | 81.07      | 49.82      | 88.84        | 74.64             |
+
+visdrone        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 67.56      | 85.78      | 56.40      | 87.57        | 84.25             |
+
+只有个别数据集有提升，整体还是下降的。
+
+---------------------------------------------------------------------
+前三十帧取三帧固定不更新_后边三帧滚动更新，更新间隔30
+
+uav123          | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 68.13      | 84.32      | 59.40      | 89.82        | 84.65             |
+
+dtb             | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 65.94      | 81.69      | 56.97      | 84.90        | 80.73             |
+
+uavtrack112      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12       | 69.61      | 83.89      | 66.83      | 86.58        | 85.30             |
+
+uavtrack112_l      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12         | 65.38      | 78.14      | 62.53      | 82.85        | 79.79             |
+
+uav123_10fps      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12        | 67.27      | 83.44      | 58.57      | 85.78        | 83.72             |
+
+uav123_l        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 67.73      | 84.55      | 60.54      | 85.49        | 88.14             |
+
+uavdt           | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 62.81      | 79.23      | 48.81      | 85.54        | 73.45             |
+
+visdrone        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 66.73      | 84.36      | 55.49      | 87.25        | 83.06             |
+
+
+
+uav123          | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 67.39      | 83.60      | 58.37      | 89.05        | 84.10             |
+
+dtb             | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 64.91      | 80.09      | 53.79      | 84.59        | 79.03             |
+
+uavtrack112      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12       | 69.30      | 83.69      | 66.54      | 85.41        | 84.92             |
+
+uavtrack112_l      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12         | 63.55      | 76.59      | 61.12      | 79.46        | 78.33             |
+
+uav123_10fps      | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12        | 67.65      | 83.97      | 58.49      | 86.55        | 84.25             |
+
+uav123_l        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 67.05      | 83.12      | 60.54      | 83.99        | 87.07             |
+
+uavdt           | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 59.79      | 75.00      | 47.18      | 80.81        | 70.32             |
+
+visdrone        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 65.75      | 83.24      | 54.82      | 85.46        | 81.99             |
+
+webuav3m        | AUC        | OP50       | OP75       | Precision    | Norm Precision    |
+t2track_12      | 59.35      | 74.51      | 47.30      | 75.62        | 74.49             |
